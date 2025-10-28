@@ -1,19 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F0E2E2"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Imagem no topo - SEM BORDAS -->
+        <ImageView
+            android:layout_width="98dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Logo Comedoria da Tia"
+            android:padding="0dp"
+            android:src="@drawable/logo_comedoria" />
+
+        <!-- Título principal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sabor de casa no meio da correria!"
+            android:textSize="20sp"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:lineSpacingExtra="8sp"
+            android:layout_marginBottom="48dp" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Faça Login:"
+            android:textSize="18sp"
+            android:textColor="#2E7D32"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Campo E-mail - APENAS LINHA INFERIOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-mail:"
+                android:textColor="#2E7D32"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+
+        </LinearLayout>
+
+        <!-- Campo Senha - APENAS LINHA INFERIOR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp">
+
+            <EditText
+                android:id="@+id/edtSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Senha:"
+                android:textColor="#2E7D32"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+
+        <!-- Botão Entrar -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENTRAR"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp"
+            android:letterSpacing="0.1" />
+
+        <!-- Link de cadastro -->
+        <TextView
+            android:id="@+id/txtCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ainda não tem cadastro? Cadastre-se"
+            android:textColor="#2E7D32"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Divisor com linha central -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2E7D32"
+                android:layout_centerVertical="true"
+                android:alpha="0.3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ou"
+                android:textColor="#2E7D32"
+                android:paddingHorizontal="16dp"
+                android:background="#E8F5E8"
+                android:layout_centerInParent="true"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <!-- Botão Google -->
+        <Button
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FAÇA LOGIN OU CADASTRE-SE COM O GOOGLE"
+            android:textSize="14sp"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#2E7D32"
+            android:drawableStart="@drawable/ic_google"
+            android:drawablePadding="8dp"
+            android:drawableTint="#2E7D32"
+            android:padding="16dp"
+            android:elevation="1dp"
+            android:letterSpacing="0.05" />
+
+    </LinearLayout>
+
+</ScrollView>
