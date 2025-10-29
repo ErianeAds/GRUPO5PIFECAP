@@ -35,7 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(v -> realizarLogin());
 
         txtCadastrar.setOnClickListener(v -> {
-            Toast.makeText(this, "Funcionalidade de cadastro em desenvolvimento", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+            startActivity(intent);
         });
 
         btnGoogle.setOnClickListener(v -> {
