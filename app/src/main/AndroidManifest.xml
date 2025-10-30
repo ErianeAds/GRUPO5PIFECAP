@@ -20,6 +20,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".CarteiraActivity" />
+        <activity android:name=".PerfilActivity" />
+        <activity android:name=".CarrinhoActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".CadastroActivity" />
     </application>

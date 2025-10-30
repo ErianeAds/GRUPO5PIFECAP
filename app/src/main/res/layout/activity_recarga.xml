@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E8F5E8"
+    android:padding="24dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:text="←"
+            android:textColor="#2E7D32"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Recarregar Carteira"
+            android:textColor="#2E7D32"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <!-- Valor da Recarga -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione o valor:"
+        android:textColor="#2E7D32"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Opções de Valor -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnValor10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="R$ 10"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#2E7D32"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnValor20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="R$ 20"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#2E7D32"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnValor50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="R$ 50"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#2E7D32"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+    <!-- Valor Personalizado -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundMode="none"
+        app:hintTextColor="#2E7D32"
+        app:boxStrokeColor="#2E7D32">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtValorPersonalizado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ou digite um valor personalizado"
+            android:textColor="#2E7D32"
+            android:inputType="numberDecimal"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botão Confirmar -->
+    <Button
+        android:id="@+id/btnConfirmarRecarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONFIRMAR RECARGA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="#2E7D32"
+        android:textColor="#FFFFFF"
+        android:padding="16dp" />
+
+</LinearLayout>
